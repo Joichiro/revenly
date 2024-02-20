@@ -1,0 +1,73 @@
+.early-bird {
+  padding: 220px 0;
+  background: url(../assets/elipse-bg.svg) center no-repeat;
+
+  @include tablet {
+    padding: 120px 0 200px;
+    background-size: 768px;
+  }
+
+  @include mobile {
+    padding: 82px 0;
+    background-size: 640px;
+  }
+
+  & .container {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      z-index: 1;
+      width: 348px;
+      height: 344px;
+      background: url(../assets/bird.png) center no-repeat;
+      background-size: cover;
+
+      @include desktop {
+        top: 100px;
+        width: 248px;
+        height: 244px;
+      }
+
+      @include laptop {
+        top: 240px;
+        width: 200px;
+        height: 200px;
+      }
+
+      @include tablet {
+        top: auto;
+        bottom: -150px;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 2;
+    max-width: 676px;
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+
+  &__description {
+    position: relative;
+    z-index: 2;
+    max-width: 516px;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+
+  &__buttons {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+  }
+}

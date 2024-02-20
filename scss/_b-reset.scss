@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap');
+
+@font-face {
+  font-family: 'Suisse Intl';
+  src: url(../fonts/SuisseIntl-Regular.otf);
+}
+
+@font-face {
+  font-family: 'Armag-Trial';
+  src: url(../fonts/armag-fury.otf);
+}
+
+@font-face {
+  font-family: 'OffBit Trial';
+  src: url(../fonts/OffBitTrial-Bold.otf);
+}
+
+html {
+  color: $black;
+  font-size: 16px;
+  font-family: 'Suisse Intl', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  background-color: $paleBlue;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: 'Suisse Intl', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+ul {
+  margin: 1rem 0;
+  padding-left: 1.125rem;
+}

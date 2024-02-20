@@ -1,0 +1,157 @@
+.backed-by {
+  &__block {
+    display: flex;
+    gap: 60px;
+    max-width: 1165px;
+    margin: 0 auto;
+    padding: 113px 95px 50px;
+    border-radius: 40px;
+    background-color: $green;
+
+    @include desktop {
+      padding: 96px 20px 50px;
+    }
+
+    @include laptop {
+      padding: 40px 20px;
+      gap: 50px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  &__left {
+    flex: 1 1 430px;
+
+    @include mobile {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__title {
+    margin: 0 0 20px;
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    margin: 0 0 20px;
+
+    @include mobile {
+      text-align: center;
+    }
+
+    & img {
+      max-width: 100%;
+      width: 400px;
+      height: auto;
+
+      @include laptop {
+        width: 300px;
+      }
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  &__tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+
+    &_basic {
+      width: 208px;
+      border-radius: 44px;
+      background-color: $white;
+    }
+
+    &_wave,
+    &_octagon,
+    &_mark {
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &_wave {
+      width: 137px;
+      background-image: url(../assets/wave-tag.png);
+    }
+
+    &_octagon {
+      width: 120px;
+      background-image: url(../assets/octagon-tag.svg);
+    }
+
+    &_mark {
+      height: 48px;
+      width: 72px;
+      background-image: url(../assets/mark-logo.svg);
+    }
+  }
+
+  &__right {
+    flex: 1 1 479px;
+
+    @include mobile {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__advantages {
+    display: flex;
+    gap: 12px;
+    margin: 0 0 20px;
+  }
+
+  &__advantage {
+    flex: 1 1 40%;
+
+    @include mobile {
+      flex: 1 1 100%;
+    }
+
+    &-title {
+      margin: 0 0 10px;
+      color: $violet;
+
+      @include laptop {
+        font-size: 38px;
+      }
+
+      @include mobile {
+        text-align: center;
+      }
+    }
+
+    &-text {
+      margin: 0;
+
+      @include mobile {
+        text-align: center;
+      }
+    }
+  }
+
+  &__description {
+    margin: 0;
+    color: $forestGreen;
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+}

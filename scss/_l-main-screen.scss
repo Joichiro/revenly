@@ -1,0 +1,42 @@
+.main-screen {
+  padding: 208px 0;
+  background: url(../assets/main-screen-bg.jpg) center no-repeat;
+
+  @include tablet {
+  }
+
+  @include mobile {
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: 680px;
+  }
+
+  &__title {
+    margin: 0 0 20px;
+    text-align: center;
+  }
+
+  &__description {
+    max-width: 558px;
+    margin: 0 auto 40px;
+    text-align: center;
+
+    @include tablet {
+      max-width: 458px;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto;
+    padding: 31px 73px;
+    font-size: 18px;
+
+    @include mobile {
+      padding: 17px 38px;
+      font-size: 14px;
+    }
+  }
+}

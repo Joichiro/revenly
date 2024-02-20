@@ -1,0 +1,30 @@
+.button {
+  display: inline-block;
+  padding: 17px 38px;
+  color: $white;
+  font-family: 'Suisse Intl';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 300px;
+  background: $black;
+  transition: $baseTransition;
+  will-change: transform;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $violet;
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &:disabled {
+    background-color: #cecece;
+    transform: scale(1);
+  }
+}

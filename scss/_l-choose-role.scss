@@ -1,0 +1,130 @@
+.choose-role {
+  padding: 0 0 80px;
+  overflow: hidden;
+
+  &__title {
+    max-width: 676px;
+    margin: 0 auto 60px;
+    text-align: center;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    @include desktop {
+      gap: 12px;
+    }
+
+    @include laptop {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      gap: 20px;
+    }
+  }
+
+  &__card {
+    position: relative;
+    flex: 1 1 30%;
+    padding: 100px 20px 40px;
+    border-radius: 40px;
+    background-color: $white;
+
+    @include mobile {
+      padding-top: 90px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 5;
+      display: block;
+      width: 345px;
+      height: 323px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &_investor {
+      &::after {
+        top: -152px;
+        left: -46px;
+        background-image: url(../assets/crystal.png);
+
+        @include laptop {
+          top: -60px;
+          left: auto;
+          right: 39px;
+          width: 218px;
+          height: 204px;
+        }
+
+        @include mobile {
+          top: -40px;
+          right: 0;
+          width: 208px;
+          height: 194px;
+        }
+      }
+    }
+
+    &_producer {
+      &::after {
+        top: -151px;
+        right: -121px;
+        background-image: url(../assets/metal-dog.png);
+
+        @include laptop {
+          top: -91px;
+          right: -29px;
+          width: 285px;
+          height: 266px;
+        }
+
+        @include mobile {
+          top: -64px;
+          right: -12px;
+          width: 249px;
+          height: 231px;
+          transform: scale(-1, 1);
+        }
+      }
+    }
+
+    &_creator {
+      &::after {
+        top: -124px;
+        right: -105px;
+        background-image: url(../assets/girl-in-sky.png);
+
+        @include laptop {
+          top: -97px;
+          right: -43px;
+          width: 312px;
+          height: 293px;
+        }
+
+        @include mobile {
+          top: -53px;
+          right: -12px;
+          width: 247px;
+          height: 233px;
+        }
+      }
+    }
+
+    &-title {
+      margin: 0 0 20px;
+      color: $violet;
+    }
+
+    &-description {
+      margin: 0;
+      color: $grey;
+    }
+  }
+}

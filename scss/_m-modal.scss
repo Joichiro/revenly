@@ -1,0 +1,97 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 500;
+  display: none;
+  padding: 10px;
+  background-color: rgba($color: $black, $alpha: 0.45);
+
+  &.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__body {
+    max-width: 1440px;
+    width: 100%;
+    padding: 97px 20px;
+    box-sizing: border-box;
+    background: url(../assets/modal-bg.jpg) center no-repeat;
+  }
+
+  &__content {
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 72px 120px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    background-color: $paleBlue;
+
+    @include tablet {
+      padding: 60px 120px;
+    }
+
+    @include mobile {
+      padding: 40px 10px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 30px;
+    text-align: center;
+
+    @include tablet {
+      margin: 0 0 10px;
+      font-size: 38px;
+    }
+  }
+
+  &__description {
+    margin: 0 0 44px;
+    text-align: center;
+  }
+
+  &__form {
+  }
+
+  &__input {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 18px;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid $black;
+    color: $black;
+    font-family: 'Suisse Intl';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    outline-color: rgba($color: $black, $alpha: 0.05);
+    background: none;
+  }
+
+  & .button {
+    display: block;
+    width: 100%;
+    margin-top: 85px;
+    padding: 31px 73px;
+    font-family: 'Suisse Intl';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    @include mobile {
+      width: auto;
+      margin: 60px auto 0;
+      font-size: 14px;
+    }
+  }
+}

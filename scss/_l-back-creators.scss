@@ -1,0 +1,44 @@
+.back-creators {
+  padding: 100px 0;
+
+  @include tablet {
+    padding: 40px 0;
+  }
+
+  @include mobile {
+    padding: 20px 0;
+  }
+
+  &__title {
+    max-width: 676px;
+    margin: 0 auto 20px;
+    text-align: center;
+
+    @include tablet {
+      max-width: 578px;
+    }
+
+    @include mobile {
+      max-width: 351px;
+    }
+  }
+
+  &__description {
+    max-width: 516px;
+    margin: 0 auto 20px;
+    text-align: center;
+
+    @include tablet {
+      max-width: 458px;
+    }
+
+    @include mobile {
+      max-width: 341px;
+    }
+  }
+
+  &__info {
+    color: violet;
+    text-align: center;
+  }
+}

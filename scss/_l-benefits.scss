@@ -1,0 +1,172 @@
+.benefits {
+  padding: 80px 0 120px;
+
+  @include mobile {
+    padding: 40px 0;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 40px;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+
+    &-item {
+      flex: 0 0 auto;
+      padding: 14px 21px;
+      font-family: 'Fragment Mono';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%;
+      letter-spacing: 0.48px;
+      text-transform: uppercase;
+      border-radius: 300px;
+      background-color: $white;
+      transition: $baseTransition;
+      user-select: none;
+      cursor: pointer;
+
+      @include mobile {
+        padding: 9px 16px;
+        font-size: 14px;
+      }
+
+      &_musicians {
+        &.active,
+        &:hover {
+          background-color: $pink;
+        }
+      }
+
+      &_nft-artists {
+        &.active,
+        &:hover {
+          background-color: $orange;
+        }
+      }
+
+      &_game-designers {
+        &.active,
+        &:hover {
+          color: $white;
+          background-color: $violet;
+        }
+      }
+
+      &_cinematographers {
+        &.active,
+        &:hover {
+          background-color: $coral;
+        }
+      }
+
+      &_metasites {
+        &.active,
+        &:hover {
+          background-color: $green;
+        }
+      }
+
+      &_bloggers {
+        &.active,
+        &:hover {
+          background-color: $mirinda;
+        }
+      }
+    }
+  }
+
+  &__card {
+    display: none;
+    opacity: 0;
+    transition: $baseTransition;
+
+    &.active {
+      display: block;
+      opacity: 1;
+    }
+
+    &-title {
+      margin: 0 0 20px;
+      text-align: center;
+    }
+
+    &-description {
+      max-width: 390px;
+      margin: 0 auto 40px;
+      color: $grey;
+      text-align: center;
+    }
+
+    &-content {
+      max-width: 1166px;
+      padding: 38px 85px 0;
+      border-radius: 40px;
+
+      @include desktop {
+        padding: 50px 60px 0;
+      }
+
+      @include mobile {
+        padding: 40px 20px 0;
+      }
+
+      &_musicians {
+        background-color: $pink;
+      }
+
+      &_nft-artists {
+        background-color: $orange;
+      }
+
+      &_game-designers {
+        background-color: $violet;
+      }
+
+      &_cinematographers {
+        background-color: $coral;
+      }
+
+      &_metasites {
+        background-color: $green;
+      }
+
+      &_bloggers {
+        background-color: $mirinda;
+      }
+
+      &-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 8px 8px 0 0;
+        object-fit: cover;
+
+        &_web {
+          @include mobile {
+            display: none;
+          }
+        }
+
+        &_mob {
+          display: none;
+
+          @include mobile {
+            display: block;
+            max-width: 287px;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 12px 12px 0 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.conditions {
+  padding-top: 120px;
+  overflow: hidden;
+
+  & .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__card {
+    flex: 1 1 48%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 250px;
+    padding: 40px 50px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    background-color: $white;
+
+    @include laptop {
+      min-height: 300px;
+    }
+
+    @include tablet {
+      flex: 1 1 330px;
+    }
+
+    @include mobile {
+      min-height: 212px;
+    }
+
+    &_bg {
+      background-image: url(../assets/conditions-card-bg.jpg);
+      background-position: right center;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+
+      @include mobile {
+        background-position: right -20px center;
+      }
+    }
+
+    &_flower {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -60px;
+        right: -135px;
+        z-index: 2;
+        display: block;
+        height: 200px;
+        width: 200px;
+        background: url(../assets/flower.png) center no-repeat;
+
+        @include laptop {
+          right: -70px;
+        }
+
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+
+    &_bucks {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -144px;
+        z-index: -1;
+        display: block;
+        height: 246px;
+        width: 246px;
+        background: url(../assets/dollar.png) center no-repeat;
+        transform: translateY(-50%);
+
+        @include desktop {
+          top: 0px;
+          left: -68px;
+        }
+
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+
+    &-title {
+      margin: 0 0 20px;
+      color: $siren;
+    }
+
+    &-description {
+      margin: 0;
+      line-height: 120%;
+      color: $grey;
+    }
+  }
+}
