@@ -2070,6 +2070,7 @@ ul {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 auto 20px;
+  cursor: pointer;
 }
 .faq__list-item-question {
   display: -webkit-box;
