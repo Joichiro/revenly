@@ -25,7 +25,7 @@ modalForm.addEventListener('submit', (event) => {
 
   fetch('https://hook.us1.make.com/2p819y3usxh49rr0kb3tu6kzt52wh5d5', {
     method: 'POST',
-    data: { 'name': userName, email: 'userEmail' },
+    data: { 'name': userName, 'email': userEmail },
   }).then(() => {
     modal.classList.remove('active');
   });
