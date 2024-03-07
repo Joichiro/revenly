@@ -840,36 +840,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      const form = document.getElementById('waitlistForm');
-      form.addEventListener('submit', async function(event) {
-        event.preventDefault();
-  
-        const formData = new FormData(form);
-        const jsonData = {};
-        formData.forEach((value, key) => {
-          jsonData[key] = value;
-        });
-  
-        try {
-          const response = await fetch('https://hook.us1.make.com/2p819y3usxh49rr0kb3tu6kzt52wh5d5', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(jsonData)
-          });
-  
-          if (!response.ok) {
-            throw new Error('Failed to submit form');
-          }
-  
-          form.reset();
-        } catch (error) {
-          console.error(error);
-        }
-      });
-    </script>
   </body>
 </html>
